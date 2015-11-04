@@ -1,0 +1,81 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	
+	"title": "Go Chooser file",
+	"description": "A dilemma for the Go Chooser",
+	"type": "object",
+	// Description of the dilemma
+	"required": [
+		"title",
+		"description",
+		"requirements"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"$schema": {
+			
+		},
+		"title": {
+			"description": "The name of the dilemma",
+			"type": "string"
+		},
+		"description": {
+			"description": "A longer description of the dilemma",
+			"type": "string"
+		},
+		"requirements": {
+			"description": "The list of requirements for the dilemma",
+			"type": "array",
+			
+			// Description of the requirements
+			"items": {
+				"required": [
+					"name",
+					"description",
+					"importance",
+					"alternatives"
+				],
+				"type": "object",
+				"description": "A requirement",
+				"properties": {
+					"name" : {
+						"description": "The (short) name of the requirement",
+						"type": "string"
+					},
+					"description": {
+						"description": "A longer more thorough description of the requirement",
+						"type": "string"
+					},
+					"importance": {
+						"description": "How important the requirement is, deciding how it is weighted in the scoring process",
+						"type": "number",
+						"minimum": 1,
+						"maximum": 5
+					},
+					"alternatives": {
+						"type": "array",
+						"description": "The alternatives for a given requirement",
+						"items": {
+							"required": [
+								"name",
+								"weight"
+							],
+							"type": "object",
+							"description": "An alternative",
+							"properties": {
+								"name": {
+									"description": "The (short) name of the description",
+									"type": "string"
+								},
+								"weight": {
+									"description": "How this alternative is weighted",
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
