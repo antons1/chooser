@@ -9,15 +9,30 @@
 			"alternatives": [
 				{
 					"name": "i5",
-					"weight": "wanted"
+					"weight": 1
 				}, 
 				{
 					"name": "i7",
-					"weight": "equal"
+					"weight": 2
 				},
 				{
 					"name": "i3",
-					"weight": "avoid"
+					"weight": 4
+				}
+			]
+		},
+		{
+			"name": "Memory",
+			"description": "The amount of memory in the computer decides blah blah blah...",
+			"importance": 3,
+			"alternatives": [
+				{
+					"name": "8gb",
+					"weight": 2
+				},
+				{
+					"name": "16gb",
+					"weight": 1
 				}
 			]
 		}

@@ -35,6 +35,7 @@
 					"importance",
 					"alternatives"
 				],
+				"additionalProperties": false,
 				"type": "object",
 				"description": "A requirement",
 				"properties": {
@@ -47,7 +48,7 @@
 						"type": "string"
 					},
 					"importance": {
-						"description": "How important the requirement is, deciding how it is weighted in the scoring process",
+						"description": "How important the requirement is, deciding how it is weighted in the scoring process. 1: Required, 2: Takes presedence, 3: Important, 4: Wished, 5: Unimportant",
 						"type": "number",
 						"minimum": 1,
 						"maximum": 5
@@ -60,6 +61,7 @@
 								"name",
 								"weight"
 							],
+							"additionalProperties": false,
 							"type": "object",
 							"description": "An alternative",
 							"properties": {
@@ -68,8 +70,10 @@
 									"type": "string"
 								},
 								"weight": {
-									"description": "How this alternative is weighted",
-									"type": "string"
+									"description": "How this alternative is weighted, 1: Wanted, 2: Equal to wanted, 3: Unwanted, 4: Deal breaker",
+									"type": "number",
+									"minimum": 1,
+									"maximum": 4
 								}
 							}
 						}
