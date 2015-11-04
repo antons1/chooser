@@ -18,13 +18,13 @@ type Requirement struct {
 	Name string
 	Description string
 	Importance float64
-	Alternatives []interface{}
+	Alternatives []Alternative
 }
 
 type Dilemma struct {
 	Title string
 	Description string
-	Requirements []interface{}
+	Requirements []Requirement
 }
 
 // Reads a dilemma from the given file.
