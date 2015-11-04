@@ -1,0 +1,25 @@
+{
+	"title": "New PC",
+	"description": "A dilemma to choose a new PC for the future",
+	"requirements": [
+		{
+			"name": "Processor",
+			"description": "The processor needs to be fast and blah blah blah...",
+			"importance": 3,
+			"alternatives": [
+				{
+					"name": "i5",
+					"weight": "wanted"
+				}, 
+				{
+					"name": "i7",
+					"weight": "equal"
+				},
+				{
+					"name": "i3",
+					"weight": "avoid"
+				}
+			]
+		}
+	]
+}
